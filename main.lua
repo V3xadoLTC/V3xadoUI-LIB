@@ -1,8 +1,8 @@
--- Rayfield UI Library - Project Information
+-- V3xadoUI UI Library - Project Information
 -- This is a Roblox UI library that requires the Roblox game environment to run
 
 print("=====================================")
-print("Rayfield UI Library")
+print("V3xadoUI UI Library")
 print("=====================================")
 print("")
 print("This is a Roblox Lua UI library.")
