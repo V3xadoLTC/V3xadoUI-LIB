@@ -1978,6 +1978,16 @@ function V3xadoUILibrary:CreateWindow(Settings)
         Elements.Template.LayoutOrder = 100000
         Elements.Template.Visible = false
 
+        -- Modify layout for left-side tabs
+        TabList.Position = UDim2.new(0, 0, 0, 40)
+        TabList.Size = UDim2.new(0, 150, 1, -40)
+        if TabList:FindFirstChild("UIListLayout") then
+                TabList.UIListLayout.FillDirection = Enum.FillDirection.Vertical
+        end
+        Elements.Position = UDim2.new(0, 150, 0, 40)
+        Elements.Size = UDim2.new(1, -150, 1, -40)
+        Main.Size = UDim2.new(0, 570, 0, 400) -- Adjust main window size
+
         Elements.UIPageLayout.FillDirection = Enum.FillDirection.Horizontal
         TabList.Template.Visible = false
 
@@ -1991,7 +2001,10 @@ function V3xadoUILibrary:CreateWindow(Settings)
                 TabButton.Title.Text = Name
                 TabButton.Parent = TabList
                 TabButton.Title.TextWrapped = false
-                TabButton.Size = UDim2.new(0, TabButton.Title.TextBounds.X + 30, 0, 30)
+                TabButton.Size = UDim2.new(1, 0, 0, 30)
+                TabButton.Title.AnchorPoint = Vector2.new(0.5, 0.5)
+                TabButton.Title.Position = UDim2.new(0.5, 0, 0.5, 0)
+                TabButton.Title.TextXAlignment = Enum.TextXAlignment.Center
 
                 if Image and Image ~= 0 then
                         if typeof(Image) == 'string' and Icons then
@@ -2004,11 +2017,11 @@ function V3xadoUILibrary:CreateWindow(Settings)
                                 TabButton.Image.Image = getAssetUri(Image)
                         end
 
-                        TabButton.Title.AnchorPoint = Vector2.new(0, 0.5)
-                        TabButton.Title.Position = UDim2.new(0, 37, 0.5, 0)
+                        TabButton.Image.Position = UDim2.new(0, 5, 0.5, 0)
+                        TabButton.Image.AnchorPoint = Vector2.new(0, 0.5)
+                        TabButton.Title.Position = UDim2.new(0.5, 10, 0.5, 0) -- Shift text right a bit
                         TabButton.Image.Visible = true
                         TabButton.Title.TextXAlignment = Enum.TextXAlignment.Left
-                        TabButton.Size = UDim2.new(0, TabButton.Title.TextBounds.X + 52, 0, 30)
                 end
 
 
