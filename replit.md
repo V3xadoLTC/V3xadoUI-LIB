@@ -1,34 +1,22 @@
 # V3xadoUI UI Library
 
 ## Overview
-V3xadoUI is a Roblox Lua UI library for creating user interfaces within the Roblox game environment. This repository contains the source code for the library.
-
-**Documentation:** https://docs.sirius.menu/rayfield
+V3xadoUI is a Roblox Lua UI library for creating user interfaces within the Roblox game environment.
 
 ## Project Structure
-- `source.lua` - Main library source code (4011 lines)
-- `icons.lua` - Icon definitions for the UI
-- `example.lua` - Example usage demonstrating how to use the library
-- `main.lua` - Project info script for Replit environment
+- `source.lua` - Main library source code
+- `icons.lua` - Icon definitions
+- `example.lua` - Example usage
+- `main.lua` - Project info script
 
 ## Important Notes
-This library is designed to run inside the Roblox game engine. It uses Roblox-specific APIs such as:
-- `game:HttpGet()` 
-- `loadstring()`
-- Roblox Instance objects
-
-The code cannot run as a standalone Lua application - it requires the Roblox environment.
-
-## Running in Replit
-The workflow runs `main.lua` which validates the project files and displays information about the library. This is for development and code inspection purposes only.
+This library is designed to run inside the Roblox game engine.
 
 ## Usage in Roblox
-To use this library in Roblox, load it using:
 ```lua
 local V3xadoUI = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 ```
 
-See `example.lua` for full usage examples.
-
 ## Recent Changes
 - 2026-01-15: Initial Replit environment setup
+- 2026-01-15: Renamed to V3xadoUI and cleaned up documentation
