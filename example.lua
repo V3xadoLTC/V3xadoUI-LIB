@@ -1,13 +1,13 @@
 debugX = true
 
-local V3xadoUI = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local V3xadoUI = loadstring(game:HttpGet('https://raw.githubusercontent.com/V3xadoLTC/V3xadoUI-LIB/refs/heads/main/source.lua'))()
 
 local Window = V3xadoUI:CreateWindow({
    Name = "V3xadoUI Example Window",
    Icon = 0, -- Icon in Topbar. Can use Lucide Icons (string) or Roblox Image (number). 0 to use no icon (default).
    LoadingTitle = "V3xadoUI Interface Suite",
-   LoadingSubtitle = "by Sirius",
-   Theme = "Default", -- Check https://docs.sirius.menu/rayfield/configuration/themes
+   LoadingSubtitle = "by V3xado",
+   Theme = "Default", 
 
    DisableV3xadoUIPrompts = false,
    DisableBuildWarnings = false, -- Prevents V3xadoUI from warning when the script has a version mismatch with the interface
